@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Grid Layout</title>
+    <style>
+        *html{
+            margin:0;
+            padding:0;
+            box-sizing: border-box;
+        }
+        main{
+            width: 1400px;
+            height: 900px;
+            margin: 0 auto;
+            display:grid ;
+            grid-template-columns: 1fr;
+            grid-template-rows: 100px,80px,500px,150px;
+            gap: 5px;
+ 
+        }
+        header,nav,footer{
+            background-color: antiquewhite;
+            display: grid;
+            place-items: center;
+        }
+        section{
+            display: grid;
+            grid-template-columns: 1fr 2fr;
+            gap: 5px;
+        }
+        #left,#right{
+            height: 50px;
+            display: grid;
+            place-items: center;
+            background-color: rgb(97, 255, 97);
+        }
+    </style>
+</head>
+<body>
+    <main>
+        <header><h2>header</h2></header>
+        <nav><h2>NAV</h2></nav>
+        <section>
+            <div id="left"><h2>left</h2></div>
+            <div id="right"><h2>Right</h2>
+            <div class="top right"><h2>top right</h2></div>
+            <div class="bottom right"><h2>bottom right</h2></div>
+            </div>
+        </section>
+        <footer><h2>Footer</h2></footer>
+
+    </main>
+    
+</body>
+</html>
